@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Client-Side Object Detector
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This application is a client-side object detector built using TensorFlow, Next.js, and TypeScript. It leverages modern web technologies to provide real-time detection of various objects through the user's webcam. Additionally, it checks for microphone availability, internet speed, and surrounding light conditions to ensure optimal performance.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Dependencies](#dependencies)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Real-time Object Detection**: Utilizes TensorFlow.js to perform object detection directly in the browser.
+- **Webcam Availability Check**: Ensures the user has a working webcam before proceeding.
+- **Microphone Check**: Verifies if a microphone is available for audio input.
+- **Internet Speed Test**: Measures the user's internet speed to ensure the application runs smoothly.
+- **Ambient Light Check**: Analyzes the surrounding light conditions to adjust the detection settings accordingly.
+- **Responsive Design**: Fully responsive and works across various devices and screen sizes.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js (>=14.x)
+- npm or yarn
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Steps
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Clone the repository:**
+    ```bash
+    git clone [https://github.com/CodeBstack/object-detection.git](https://github.com/CodeBstack/object-detection.git)
+    cd object-detection
+    ```
 
-## Deploy on Vercel
+2. **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Run the development server:**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. **Open your browser and navigate to:**
+    ```
+    http://localhost:3000
+    ```
+
+## Usage
+
+### Starting the Application
+
+- Once the application is running, it will prompt you to grant access to your webcam and microphone.
+- After granting permissions, the application will perform an internet speed test and check the ambient light conditions.
+- If all checks are passed, the object detection will start automatically.
+
+### Object Detection
+
+- The application will display a live feed from your webcam.
+- Detected objects will be highlighted and labeled in real-time.
+
+### Configuration
+
+- Configuration settings can be adjusted in the `config.ts` file.
+- You can modify parameters such as detection sensitivity, minimum internet speed requirement, and more.
+
+
+## Dependencies
+
+- **TensorFlow.js**: For running the object detection model in the browser.
+- **Next.js**: For server-side rendering and static site generation.
+- **TypeScript**: For type safety and better development experience.
+- **React**: For building the user interface.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+
+
