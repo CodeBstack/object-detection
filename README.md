@@ -32,7 +32,7 @@ This application is a client-side object detector built using TensorFlow, Next.j
 
 1. **Clone the repository:**
     ```bash
-    git clone [https://github.com/CodeBstack/object-detection.git](https://github.com/CodeBstack/object-detection.git)
+    git clone https://github.com/CodeBstack/object-detection.git
     cd object-detection
     ```
 
