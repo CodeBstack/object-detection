@@ -24,6 +24,7 @@ import WebcamCapture from './WebcamCapture';
 import CircularProgressBar from './CircularProgressBar';
 import TickCircleIcon from './Vectors/TickCircleIcon';
 import DangerIcon from './Vectors/DangerIcon';
+import SurroundingLight from './SurroundingLight';
 
 const ObjectDetection = () => {
   const [internetSpeed, setInternetSpeed] =
@@ -62,7 +63,7 @@ const ObjectDetection = () => {
       iconSmall: <MonitorIconSmall />,
       text: 'Webcam',
       isActive: webcamActive ? true : false,
-      progress: 100,
+      progress: webcamActive ? 100 : 0,
     },
     {
       icon: <WifiIcon />,
@@ -81,7 +82,7 @@ const ObjectDetection = () => {
       iconSmall: <MicIconSmall />,
       text: 'Gadget mic',
       isActive: micActive ? true : false,
-      progress: 100,
+      progress: micActive ? 100 : 0,
     },
     {
       icon: <LampIcon />,
@@ -162,8 +163,9 @@ const ObjectDetection = () => {
       </div>
 
       <Microphone setmicActive={setmicActive} />
-
-      
+      <SurroundingLight
+        setlightingActive={setlightingActive}
+      />
     </div>
   );
 };
