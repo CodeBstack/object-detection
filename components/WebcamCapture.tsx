@@ -164,7 +164,7 @@ const WebcamCapture = ({
           />
           {photo && (
             <div
-              className={`w-[275px] h-[168px]  ${
+              className={`w[275px] h[168px]  ${
                 (predictions?.length > 0 ||
                   isEmptyPredictions) &&
                 !openProceedModal
@@ -190,7 +190,7 @@ const WebcamCapture = ({
                 alt="Captured"
                 width="275"
                 height="168"
-                className="w-full h-full rounded-[10px]"
+                className="rounded-[10px]"
               />
             </div>
           )}
